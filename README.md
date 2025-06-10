@@ -2,9 +2,9 @@ This repository is a project overview of a lab I did while at Seneca College. It
 
 
 
-- Commands for complete functionality
+Commands for complete functionality
 
-- Aruba 6300 Switch Configuration
+Aruba 6300 Switch Configuration
 
  - 6300# conf t  
  - 6300(config)# vlan 25  
@@ -56,8 +56,8 @@ This repository is a project overview of a lab I did while at Seneca College. It
  - 6300(config)# spanning-tree  
  - 6300# exit  
 
-- Aruba 2530 Switch Configuration
- - The following configuration commands were executed on the Aruba 2530 switch to set up VLANs, link aggregation, and enable spanning tree for efficient network traffic management.
+Aruba 2530 Switch Configuration
+The following configuration commands were executed on the Aruba 2530 switch to set up VLANs, link aggregation, and enable spanning tree for efficient network traffic management.
 
  - HP-2530-24-PoEP# conf t  
  - HP-2530-24-PoEP(config)# trunk 2-4 trk1 lacp  
