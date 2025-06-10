@@ -57,6 +57,7 @@ Aruba 6300 Switch Configuration
  - 6300# exit  
 
 Aruba 2530 Switch Configuration
+
 The following configuration commands were executed on the Aruba 2530 switch to set up VLANs, link aggregation, and enable spanning tree for efficient network traffic management.
 
  - HP-2530-24-PoEP# conf t  
