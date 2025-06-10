@@ -2,7 +2,7 @@ This repository is a project overview of a lab I did while at Seneca College. It
 
 
 
-. Commands for complete functionality
+- Commands for complete functionality
 
 6300# conf t
 6300(config)# vlan 25
