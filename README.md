@@ -4,70 +4,71 @@ This repository is a project overview of a lab I did while at Seneca College. It
 
 - Commands for complete functionality
 
-6300# conf t
-6300(config)# vlan 25
-6300(config-vlan-25)# no shut
-6300(config-vlan-25)# exit
-6300(config)# vlan 14
-6300(config-vlan-14)# no shut
-6300(config-vlan-14)# exit
-6300(config)# int lag 1
-6300(config-if-lag1)# no shut
-6300(config-if-lag1)# no routing
-6300(config-if-lag1)# vlan trunk native 1
-6300(config-if-lag1)# vlan trunk allowed all
-6300(config-if-lag1)# lacp mode active
-6300(config-if-lag1)# exit
-6300(config)# int 1/1/2
-6300(config-if-1/1/2)# no shut
-6300(config-if-1/1/2)# lag 1
-6300(config-if-1/1/2)# exit
-6300(config)# int 1/1/4
-6300(config-if-1/1/4)# no shut
-6300(config-if-1/1/4)# lag 1
-6300(config-if-1/1/2)# exit
-6300(config)# int 1/1/1
-6300(config-if-1/1/1)# no shut
-6300(config-if-1/1/1)# no routing
-6300(config-if-1/1/1)# vlan access 25
-6300(config-if-1/1/1)# exit
-6300(config)# int vlan 25
-6300(config-if-vlan25)# ip address 172.20.12.129 255.255.255.128
-6300(config-if-vlan25)# no shut
-6300(config-if-vlan25)# exit
-6300(config)# int vlan 14
-6300(config-if-vlan14)# ip address 172.20.7.1 255.255.255.128
-6300(config-if-vlan14)# no shut
-6300(config-if-vlan14)# exit
-6300(config)# dhcp-server vrf default
-6300(config-dhcp-server)# pool 25
-6300(config-dhcp-pool-25)# range 172.20.12.130 172.20.12.254 prefix-len 25
-6300(config-dhcp-pool-25)# default-router 172.20.12.129
-6300(config-dhcp-pool-25)# exit
-6300(config-dhcp-server)# pool 14
-6300(config-dhcp-pool-14)# range 172.20.7.2 172.20.7.126 prefix-len 25
-6300(config-dhcp-pool-14)# default-router 172.20.7.1
-6300(config-dhcp-pool-14)# exit
-6300(config-dhcp-server)# auto-confirm
-6300(config-dhcp-server)# enable
-6300(config-dhcp-server)# exit
-6300(config)# spanning-tree
-6300# exit
-8 Aruba 2530 Switch Configuration
- 
-The following configuration commands were executed on the Aruba 2530 switch to set up VLANs, link aggregation, and enable spanning-tree for efficient network traffic management.
- 
-HP-2530-24-PoEP# conf t
-HP-2530-24-PoEP(config)# trunk 2-4 trk1 lacp
-HP-2530-24-PoEP(config)# vlan 25
-HP-2530-24-PoEP(config-vlan-25)# tagged trk1
-HP-2530-24-PoEP(config-vlan-25)# no ip address
-HP-2530-24-PoEP(config-vlan-25)# exit
-HP-2530-24-PoEP(config)# vlan 14
-HP-2530-24-PoEP(config-vlan-14)# untagged 1
-HP-2530-24-PoEP(config-vlan-14)# tagged trk1
-HP-2530-24-PoEP(config-vlan-14)# no ip address
-HP-2530-24-PoEP(config-vlan-14)# exit
-HP-2530-24-PoEP(config)# spanning-tree
-HP-2530-24-PoEP(config)# exit
+- Aruba 6300 Switch Configuration
 
+ - 6300# conf t  
+ - 6300(config)# vlan 25  
+ - 6300(config-vlan-25)# no shut  
+ - 6300(config-vlan-25)# exit  
+ - 6300(config)# vlan 14  
+ - 6300(config-vlan-14)# no shut  
+ - 6300(config-vlan-14)# exit  
+ - 6300(config)# int lag 1  
+ - 6300(config-if-lag1)# no shut  
+ - 6300(config-if-lag1)# no routing  
+ - 6300(config-if-lag1)# vlan trunk native 1  
+ - 6300(config-if-lag1)# vlan trunk allowed all  
+ - 6300(config-if-lag1)# lacp mode active  
+ - 6300(config-if-lag1)# exit  
+ - 6300(config)# int 1/1/2  
+ - 6300(config-if-1/1/2)# no shut  
+ - 6300(config-if-1/1/2)# lag 1  
+ - 6300(config-if-1/1/2)# exit  
+ - 6300(config)# int 1/1/4  
+ - 6300(config-if-1/1/4)# no shut  
+ - 6300(config-if-1/1/4)# lag 1  
+ - 6300(config-if-1/1/2)# exit  
+ - 6300(config)# int 1/1/1  
+ - 6300(config-if-1/1/1)# no shut  
+ - 6300(config-if-1/1/1)# no routing  
+ - 6300(config-if-1/1/1)# vlan access 25  
+ - 6300(config-if-1/1/1)# exit  
+ - 6300(config)# int vlan 25  
+ - 6300(config-if-vlan25)# ip address 172.20.12.129 255.255.255.128  
+ - 6300(config-if-vlan25)# no shut  
+ - 6300(config-if-vlan25)# exit  
+ - 6300(config)# int vlan 14  
+ - 6300(config-if-vlan14)# ip address 172.20.7.1 255.255.255.128  
+ - 6300(config-if-vlan14)# no shut  
+ - 6300(config-if-vlan14)# exit  
+ - 6300(config)# dhcp-server vrf default  
+ - 6300(config-dhcp-server)# pool 25  
+ - 6300(config-dhcp-pool-25)# range 172.20.12.130 172.20.12.254 prefix-len 25  
+ - 6300(config-dhcp-pool-25)# default-router 172.20.12.129  
+ - 6300(config-dhcp-pool-25)# exit  
+ - 6300(config-dhcp-server)# pool 14  
+ - 6300(config-dhcp-pool-14)# range 172.20.7.2 172.20.7.126 prefix-len 25  
+ - 6300(config-dhcp-pool-14)# default-router 172.20.7.1  
+ - 6300(config-dhcp-pool-14)# exit  
+ - 6300(config-dhcp-server)# auto-confirm  
+ - 6300(config-dhcp-server)# enable  
+ - 6300(config-dhcp-server)# exit  
+ - 6300(config)# spanning-tree  
+ - 6300# exit  
+
+- Aruba 2530 Switch Configuration
+ - The following configuration commands were executed on the Aruba 2530 switch to set up VLANs, link aggregation, and enable spanning tree for efficient network traffic management.
+
+ - HP-2530-24-PoEP# conf t  
+ - HP-2530-24-PoEP(config)# trunk 2-4 trk1 lacp  
+ - HP-2530-24-PoEP(config)# vlan 25  
+ - HP-2530-24-PoEP(config-vlan-25)# tagged trk1  
+ - HP-2530-24-PoEP(config-vlan-25)# no ip address  
+ - HP-2530-24-PoEP(config-vlan-25)# exit  
+ - HP-2530-24-PoEP(config)# vlan 14  
+ - HP-2530-24-PoEP(config-vlan-14)# untagged 1  
+ - HP-2530-24-PoEP(config-vlan-14)# tagged trk1  
+ - HP-2530-24-PoEP(config-vlan-14)# no ip address  
+ - HP-2530-24-PoEP(config-vlan-14)# exit  
+ - HP-2530-24-PoEP(config)# spanning-tree  
+ - HP-2530-24-PoEP(config)# exit 
