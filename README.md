@@ -1,3 +1,5 @@
+# Aruba-Networking
+
 This repository is a project overview of a lab I did while at Seneca College. It provides a comprehensive guide to configuring trunking via one Aruba 6300 and one Aruba 2530 Switch. The 6300 switch functions as a Layer 3 switch, whereas the 2500 switch operates as a Layer 2 switch. This project can be completed with two 6300s, although the configuration will need to be different. With this topology, we have two PCs. PC1 and PC2 must reside within their VLANs and receive an IP via DHCP pools. Successful implementation will allow the virtual machines to communicate via ICMP and enable secure SSH access using key pairs. Lastly, each member must install and configure an Apache webpage. This webpage must display your name and Seneca ID, and each member must be able to access the webpage via the IP received from the DHCP server.
 
 PSA: This is a fourth-semester course, and by this stage, you are expected to complete this lab independently. You may reference this material as a guide, but under no circumstances should you submit it as your work. Doing so is considered academic misconduct.
