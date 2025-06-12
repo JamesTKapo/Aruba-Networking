@@ -7,9 +7,9 @@ Let me be clear: I will know if this is copied and used improperly. Academic dis
 Please review Seneca’s academic integrity guidelines to fully understand the consequences.
 
 
-Commands for complete functionality
+# Commands for complete functionality
 
-Aruba 6300 Switch Configuration
+# Aruba 6300 Switch Configuration
 
  - 6300# conf t  
  - 6300(config)# vlan 25  
@@ -61,7 +61,7 @@ Aruba 6300 Switch Configuration
  - 6300(config)# spanning-tree  
  - 6300# exit  
 
-Aruba 2530 Switch Configuration
+# Aruba 2530 Switch Configuration
 
 The following configuration commands were executed on the Aruba 2530 switch to set up VLANs, link aggregation, and enable spanning tree for efficient network traffic management.
 
